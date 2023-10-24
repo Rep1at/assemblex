@@ -1,0 +1,128 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+}
+
+.product-details {
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 800px;
+}
+
+.product-title {
+    font-size: 28px;
+    font-weight: bold;
+    margin: 20px 0;
+}
+
+.product-image {
+    max-width: 100%;
+    height: auto;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    transition: transform 0.3s;
+}
+
+.product-image:hover {
+    transform: scale(1.1);
+}
+
+.product-cpu, .product-gpu, .product-price, .product-description {
+    margin: 10px 0;
+    text-align: left;
+}
+
+.product-cpu, .product-gpu, .product-price {
+    font-weight: bold;
+}
+
+.product-cpu::before {
+    content: "CPU: ";
+}
+
+.product-gpu::before {
+    content: "GPU: ";
+}
+
+.product-price::before {
+    content: "Price: $";
+}
+
+a {
+    text-decoration: none;
+    font-weight: bold;
+    background-color: #007BFF;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+    display: inline-block;
+    margin-top: 20px;
+}
+
+a:hover {
+    background-color: #0056b3;
+}
+
+.product-details {
+    /* ... (предыдущие стили) ... */
+    min-height: 500px;
+}
+
+.product-description {
+    font-size: 16px;
+}
+
+a {
+    /* ... (предыдущие стили) ... */
+    display: inline-block;
+    margin-top: 20px;
+    padding: 15px 30px;
+    font-size: 20px;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+a:hover {
+    /* ... (предыдущие стили) ... */
+    background-color: #0056b3;
+    transition: background-color 0.3s;
+}
+
+/* Дополнительные стили для контейнера с информацией о товаре */
+
+.product-info {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.product-info-item {
+    flex: 0 0 calc(33.333% - 10px);
+    margin: 5px;
+    padding: 15px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    text-align: center;
+}
+
+.product-info-item h4 {
+    font-size: 18px;
+    margin: 0;
+}
+
+.product-info-item p {
+    font-size: 14px;
+    margin: 10px 0;
+}
