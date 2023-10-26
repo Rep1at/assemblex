@@ -46,6 +46,18 @@ a{
     z-index: 1000;
 
 }
+
+.fixed-header {
+  position: fixed;
+  background-color: rgba(162, 162, 162, 0.7); /* Задайте желаемый фон в фиксированном состоянии */
+  z-index: 1000; 
+}
+
+.fixed-header .header__inner{
+    padding-top: 0px;
+    padding-bottom: 0px;
+}
+
 .header__inner{
     padding-top: 20px;
     padding-bottom: 45px;
@@ -207,7 +219,7 @@ a{
     margin-top: 66px;
 }
 
-.offer__title{
+.title{
     color: #D377FF;
     font-family: 'Outfit', sans-serif;
     font-size: 72px;
@@ -229,7 +241,7 @@ a{
     display: flex;
     flex-wrap: wrap;
     gap: 147px;
-    margin-bottom: 25px;
+    margin-bottom: 95px;
 }
 
 .products {
@@ -312,3 +324,207 @@ font-weight: 400;
     margin-top: 20px;
 }
 
+
+
+/*Player*/
+
+.player{
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    background: url(../images/bg2.jpg)no-repeat center;
+    background-size: cover ;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+
+.player__text{
+    color: #FFF;
+    font-family: 'Outfit', sans-serif;
+    font-size: 38px;
+    font-weight: 200;
+    text-align: center;
+    padding-bottom: 65px;
+}
+
+.player__title{
+    color: #FFF;
+    font-family: 'Outfit', sans-serif;
+    font-size: 89px;
+    font-weight: 300;
+    padding-bottom: 65px;
+}
+
+.player__link{
+    font-family: 'Inter',sans-serif;
+    font-size: 33px;
+    font-weight: 200;
+    position: relative;
+    transition: all 0.3s;
+}
+
+.player__link::after {
+  content: ''; 
+  position: absolute;
+  left: 0; 
+  bottom: -2px; 
+  width: 100%; 
+  height: 2px; 
+  background: #eb7dff; 
+  opacity: 0; 
+  transition: opacity 0.3s;
+}
+
+.player__link:hover::after {
+  opacity: 1; 
+}
+
+.player__link:hover{
+    opacity: 0.7;
+}
+
+
+/*advantages*/
+.advantages__inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap:150px;
+    padding-bottom: 123px;
+}
+
+.advantages__title{
+    margin-bottom: 100px;
+}
+
+.advantages__item {
+    display: flex;
+    align-items: center;
+    border-radius: 100px;
+    background: #9554FF;
+    box-shadow: 4px 2px 4px 0px rgba(0, 0, 0, 0.25);
+    width: 682px;
+    height: 110px;
+    margin-bottom: 50px;
+    position: relative;
+    transition: all .3s;
+    z-index: 2;
+}
+
+.advantages__img{
+    width: 61px;
+    height: 61px;
+}
+
+.circle {
+    width: 100px;
+    height: 100px;
+    background-color: #ACFFA5;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 34px;
+    margin-left: 10px;
+}
+
+.advantages__subtitle{
+    color: #FFF;
+    font-family: 'Inter',sans-serif;
+    font-size: 26px;
+    font-weight: 300;
+    padding-bottom: 4px;
+    transition: all .3s;
+}
+
+
+.advantages__text{
+    color: #FFF;
+    font-family: 'Inter',sans-serif;
+    font-size: 16px;
+    font-weight: 200;
+    transition: all .3s;
+}
+
+.advantages__item:hover{
+    width: 850px; 
+    background: #a66fff;
+}
+
+
+.advantages__item::before {
+    content: '';
+    background: url('../images/icon/stick_a.svg') no-repeat center center;
+    background-size: 100%;
+    width: 26px;
+    height: 49px;
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: opacity 0.3s;
+    opacity: 0.56; 
+}
+
+.advantages__item:hover::before {
+    opacity: 1;
+}
+
+.advantages__bg {
+    position: absolute;
+    right: 0;
+    padding: 0 15px;
+    z-index: 1;
+}
+
+/*Footer*/
+.footer{
+    padding-top: 40px;
+    background: linear-gradient(180deg, #000 0%, #A9A9A9 0.01%, rgba(17, 0, 44, 0.56) 19.79%);
+}
+
+.footer__center{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    margin-bottom: 30px;
+}
+
+.footer__icon{
+    transition: all .3s;
+}
+
+.footer__icon:hover{
+    fill:#A6BFFF;
+}
+
+.footer__name{
+    color: #FFF;
+    font-family: "Outfit", sans-serif;
+    font-size: 19px;
+    font-weight: 700;
+    padding: 0;
+}
+
+.footer__left{
+    display: flex;
+    align-items: center;
+    gap:20px;
+    padding-bottom: 15px;
+}
+
+.footer__reserved{
+    color: #FFF;
+    font-family: "Inter", sans-serif;
+    font-size: 14px;
+    font-weight: 300;
+}
+
+.footer__policy{
+    color: #FFF;
+    font-family: "Inter", sans-serif;
+    font-size: 15px;
+    font-weight: 400;
+}
