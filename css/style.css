@@ -481,7 +481,7 @@ font-weight: 400;
 /*Footer*/
 .footer{
     padding-top: 40px;
-    background: linear-gradient(180deg, #000 0%, #A9A9A9 0.01%, rgba(17, 0, 44, 0.56) 19.79%);
+    background: rgba(17, 0, 44, 0.56);
 }
 
 .footer__center{
