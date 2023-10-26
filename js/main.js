@@ -4,8 +4,8 @@ document.addEventListener("DOMContentLoaded", function () {
             title: "LITE X",
             description: "This is the product description for LITE X.",
             image: "images/comp/r1.png",
-            cpu: "AMD Ryzen 5 5600",
-            gpu: "NVIDIA RTX 3050",
+            cpu: "AMD Ryzen 3 4100",
+            gpu: "NVIDIA GTX 1660 Super",
             price: "$999"
         },
         "1": {
@@ -40,8 +40,19 @@ document.addEventListener("DOMContentLoaded", function () {
         productTitle.textContent = productDetails[productIndex].title;
         productDescription.textContent = productDetails[productIndex].description;
         productImage.src = productDetails[productIndex].image;
-        productCPU.textContent = "CPU: " + productDetails[productIndex].cpu;
-        productGPU.textContent = "GPU: " + productDetails[productIndex].gpu;
-        productPrice.textContent = "Price: " + productDetails[productIndex].price;
+        productCPU.textContent = "" + productDetails[productIndex].cpu;
+        productGPU.textContent = "" + productDetails[productIndex].gpu;
+        productPrice.textContent = "" + productDetails[productIndex].price;
     }
+});
+
+var header = document.querySelector('.header');
+var scrollThreshold = 300; // Выберите расстояние, при котором хедер станет фиксированным
+
+window.addEventListener('scroll', function() {
+  if (window.pageYOffset > scrollThreshold) {
+    header.classList.add('fixed-header');
+  } else {
+    header.classList.remove('fixed-header');
+  }
 });
