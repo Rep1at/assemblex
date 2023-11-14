@@ -79,6 +79,49 @@ a{
     color: #9BE7FF;
 }
 
+/* Выпадающее меню */
+.menu-with-submenu {
+    position: relative;
+}
+
+.submenu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: rgba(162, 162, 162, 0.7); /* Цвет фона выпадающего меню */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    list-style: none;
+    padding: 6px; /* Увеличим отступы для меню */
+    margin: 0;
+    z-index: 100;
+    opacity: 0;
+    visibility: hidden;
+    transition: all .3s; /* Плавный переход для opacity и visibility */
+    text-transform: uppercase;
+}
+
+.submenu li {
+    margin: 10px 0;
+}
+
+.submenu a {
+    font-size: 16px;
+    font-weight: normal;
+    color: #fff; /* Цвет текста в меню */
+    
+}
+
+.submenu__link:hover{
+    color: #9BE7FF;
+}
+
+.menu-with-submenu:hover .submenu {
+    display: block;
+    opacity: 1;
+    visibility: visible;
+}
+
 /* Intro*/
 
 .intro{
@@ -261,10 +304,10 @@ a{
 
 .product__item{
     background-color: #E1E1E1;
-    color: #AA83FF;
+    color: #80B2FF;
     font-family: 'Inter',sans-serif;
     font-size: 17px;
-    font-weight: 400;
+    font-weight: 600;
 }
 
 
