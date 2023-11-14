@@ -56,3 +56,49 @@ window.addEventListener('scroll', function() {
     header.classList.remove('fixed-header');
   }
 });
+
+
+
+$(document).ready(function () {
+    const minPriceInput = document.getElementById('minPrice');
+    const maxPriceInput = document.getElementById('maxPrice');
+    const priceRange = document.getElementById('priceRange');
+    const productCards = document.querySelectorAll('.products');
+    const applyFilterBtn = document.getElementById('applyFilterBtn');
+
+    const priceSlider = noUiSlider.create(priceRange, {
+        start: [0, 2000],
+        connect: true,
+        range: {
+            'min': 0,
+            'max': 2000
+        }
+    });
+
+    priceSlider.on('update', function (values, handle) {
+        if (handle === 0) {
+            minPriceInput.value = Math.round(values[0]);
+        } else {
+            maxPriceInput.value = Math.round(values[1]);
+        }
+    });
+
+    applyFilterBtn.addEventListener('click', function () {
+        updatePriceFilter();
+    });
+
+    function updatePriceFilter() {
+        const minPrice = parseInt(minPriceInput.value) || 0;
+        const maxPrice = parseInt(maxPriceInput.value) || parseInt(priceSlider.options.range.max);
+
+        productCards.forEach(function (card) {
+            const productPrice = parseInt(card.dataset.price);
+
+            if (productPrice >= minPrice && productPrice <= maxPrice) {
+                card.style.display = 'block';
+            } else {
+                card.style.display = 'none';
+            }
+        });
+    }
+});
