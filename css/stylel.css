@@ -1,0 +1,496 @@
+html{
+    box-sizing: border-box;
+}
+*,
+::after,
+::before{
+    box-sizing: inherit;
+}
+html, body {
+    height: 100%;
+}
+
+/* Скрыть стрелочки в input number */
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input[type="number"] {
+    -moz-appearance: textfield;
+}
+
+body{
+    font-family: 'Outfit', sans-serif;
+}
+
+ul{
+    list-style-type: none;
+}
+
+a{
+    text-decoration: none;
+    color:  #fff;
+    font-family: 'Outfit', sans-serif;
+    font-size: 28px;
+    font-weight: 400;
+}
+
+.active{
+    color: #9BE7FF;
+}
+
+.container{
+    width: 100%;
+    max-width: 1420px;
+    margin: 0 auto;
+    padding: 0 10px;
+    
+
+}
+
+.container__product{
+        width: 100%;
+    max-width: 1420px;
+    margin: 0 auto;
+    padding: 0 10px;
+    display: flex;
+    justify-content: space-between;
+
+}
+
+/*Header*/
+.header{
+    background-color: rgba(162, 162, 162, 0.7);
+    top: 0;
+    left: 0;
+    right: 0;
+    margin-bottom: 88px;
+
+
+}
+
+.fixed-header {
+  position: fixed;
+  background-color: rgba(162, 162, 162, 0.7); /* Задайте желаемый фон в фиксированном состоянии */
+  z-index: 1000; 
+}
+
+.fixed-header .header__inner{
+    padding-top: 0px;
+    padding-bottom: 0px;
+}
+
+.header__inner{
+    padding-top: 20px;
+    padding-bottom: 7px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.menu__list{
+    display: flex;
+    gap: 30px;
+}
+
+.menu__link{
+    transition: all .3s;
+}
+
+.menu__link:hover{
+    color: #9BE7FF;
+}
+
+/* Выпадающее меню */
+.menu-with-submenu {
+    position: relative;
+}
+
+.submenu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: rgba(162, 162, 162, 0.7); /* Цвет фона выпадающего меню */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    list-style: none;
+    padding: 6px; /* Увеличим отступы для меню */
+    margin: 0;
+    z-index: 100;
+    opacity: 0;
+    visibility: hidden;
+    transition: all .3s; /* Плавный переход для opacity и visibility */
+    text-transform: uppercase;
+}
+
+.submenu li {
+    margin: 10px 0;
+}
+
+.submenu a {
+    font-size: 16px;
+    font-weight: normal;
+    color: #fff; /* Цвет текста в меню */
+    
+}
+
+.submenu__link:hover{
+    color: #9BE7FF;
+}
+
+.menu-with-submenu:hover .submenu {
+    display: block;
+    opacity: 1;
+    visibility: visible;
+}
+
+/*Product__top*/
+
+.products__title{
+    text-transform: uppercase;
+    text-align: center;
+    color: #D377FF;
+    font-family: 'Outfit',sans-serif;
+    font-size: 72px;
+    font-weight: 600;
+    margin-bottom: 50px;
+}
+
+
+/*Card filter*/
+
+.filter__title{
+    color: #9086FF;
+    font-family: 'Inter',sans-serif;
+    font-size: 23px;
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.filter {
+    
+    max-width: 300px;
+    box-sizing: border-box;
+    padding: 20px;
+    background-color: #f4f4f4;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#priceRange .noUi-connect {
+    background-color: #C7FFF5;
+    border-radius: 10px;
+}
+
+/* Стили для круглых ползунков noUiSlider */
+.noUi-handle {
+    border-radius: 20px !important;
+    cursor: pointer;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1) !important;
+    transition: background-color 0.3s, border-color 0.3s;
+}
+
+.noUi-handle:hover {
+    background-color: #dac7ff; /* Цвет ползунка при наведении, выберите подходящий */
+}
+
+
+.filter-input {
+    width: 100%;
+    padding: 14px;
+    text-align: center;
+    margin-bottom: 10px;
+    border-radius: 17px;
+    background: #D9D9D9;
+    border: none;
+    color: rgba(0, 0, 0, 0.21);
+    font-family: 'Inter',sans-serif;
+    font-size: 21px;
+    font-weight: 600;
+
+}
+
+.product-container{
+    display: block;
+}
+
+.filter-range {
+    margin-top: 10px;
+}
+
+.filter__item{
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.applyFilterBtn{
+    cursor: pointer;
+    border: none;
+    border-radius: 18px;
+    background-color: #B9A0FF;
+    color: #fff;
+    text-align: center;
+    padding: 10px 40px;
+    margin-top: 20px;
+    margin-left: 60px;
+    text-transform: uppercase;
+    font-family: 'OutFit', sans-serif;
+    font-size: 21px;
+    transition: all .3s;
+    opacity: 1;
+}
+
+.applyFilterBtn:hover{
+    opacity: 0.9;
+}
+
+.products-list {
+    list-style: none;
+    padding: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 147px;
+    margin-bottom: 95px;
+}
+
+.products {
+    border: 1px solid #e0e0e0;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+    margin: 0;
+}
+
+
+.products:hover {
+    transform: scale(1.03);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+}
+
+.product__item{
+    background-color: #E1E1E1;
+    color: #80B2FF;
+    font-family: 'Inter',sans-serif;
+    font-size: 17px;
+    font-weight: 600;
+}
+
+
+.product__img {
+    width: 339px;
+    height: 332px;
+    flex-shrink: 0;
+    padding-bottom: 29px;
+}
+
+
+.product__title {
+color: #9DB9FF;
+text-shadow: 3px 2px 4px rgba(0, 0, 0, 0.25);
+font-family: 'Inter', sans-serif;
+font-size: 36px;
+font-weight: 400;
+    text-align: center;
+    padding-bottom: 14px;
+}
+
+.product__info{
+    padding: 0 15px;
+}
+
+.product__icon {
+    width: 24px; /* Размер иконок, можно настроить по вашему выбору */
+    height: 24px;
+    margin-right: 10px; /* Расстояние между иконкой и текстом */
+}
+
+.product__cpu{
+    display: flex;
+    padding-bottom: 16px;
+    align-items: center;
+}
+
+.product__video{
+    display: flex;
+    padding-bottom: 16px;
+    align-items: center;
+}
+
+.product__ram{
+    display: flex;
+    padding-bottom: 16px;
+    align-items: center;
+}
+
+.product__disk{
+    display: flex;
+    padding-bottom: 50px;
+    align-items: center;
+}
+
+.button.product__button{
+    margin-top: 20px;
+}
+
+
+/*Buttom*/
+/*#D2A3DD*/
+.button{
+    position: relative;
+    color: #9BE7FF;
+    display: inline-block;
+    text-transform: uppercase;
+    font-family: 'Inter', sans-serif;
+    font-size: 32px;
+    font-weight: 400;
+    overflow: hidden;
+    letter-spacing: 4px;
+    padding: 15px 30px;
+    transition: .2s;
+    margin-top: 38px;
+}
+
+.button__line{
+    position: absolute;
+    display: block;
+    
+}
+
+.button__line--top{
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 2px;
+    background:linear-gradient(90deg,transparent,#9BE7FF);
+    
+}
+
+.button:hover .button__line--top{
+    left: 100%;
+    transition: 1s;
+    transition-delay: .025s;
+}
+
+.button__line--bottom{
+    bottom: 0;
+    right: -100%;
+    width: 100%;
+    height: 2px;
+    background:linear-gradient(270deg,transparent,#9BE7FF);
+    
+}
+
+.button:hover .button__line--bottom{
+    right: 100%;
+    transition: 1s;
+    transition-delay: .025s;
+}
+
+.button__line--left{
+    bottom: -100%;
+    left: 0;
+    width: 2px;
+    height: 100%;
+    background:linear-gradient(0deg,transparent,#9BE7FF);
+    
+}
+
+.button:hover .button__line--left{
+    bottom: 100%;
+    transition: 1s;
+    transition-delay: .025s;
+}
+
+.button__line--right{
+    top: -100%;
+    right: 0;
+    width: 2px;
+    height: 100%;
+    background:linear-gradient(0deg,transparent,#9BE7FF);
+    
+}
+
+.button:hover .button__line--right{
+    top: 100%;
+    transition: 1s;
+    transition-delay: .025s;
+}
+
+.button:hover {
+    box-shadow: 0 0 10px #9BE7FF, 0 0 30px #9BE7FF;
+    background-color: #9BE7FF;
+    color: #fff;
+    transition-delay: .5s;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*Footer*/
+.footer{
+    padding-top: 40px;
+    background: rgba(17, 0, 44, 0.56);
+}
+
+.footer__center{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    margin-bottom: 30px;
+}
+
+.footer__icon{
+    transition: all .3s;
+}
+
+.footer__icon:hover{
+    fill:#A6BFFF;
+}
+
+.footer__name{
+    color: #FFF;
+    font-family: "Outfit", sans-serif;
+    font-size: 19px;
+    font-weight: 700;
+    padding: 0;
+}
+
+.footer__left{
+    display: flex;
+    align-items: center;
+    gap:20px;
+    padding-bottom: 15px;
+}
+
+.footer__reserved{
+    color: #FFF;
+    font-family: "Inter", sans-serif;
+    font-size: 14px;
+    font-weight: 300;
+}
+
+.footer__policy{
+    color: #FFF;
+    font-family: "Inter", sans-serif;
+    font-size: 15px;
+    font-weight: 400;
+}
