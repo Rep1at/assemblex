@@ -1,21 +1,140 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Детальная информация о товаре</title>
-      <link rel="stylesheet" href="css/style2.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/slick.css">
+  <link rel="stylesheet" href="css/jquery.fancybox.css">
+  <link rel="stylesheet" href="css/style2.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,700&family=Inter:wght@100;200;300;400;700&family=Outfit:wght@200;300;400;500;700;800&display=swap" rel="stylesheet">
 </head>
 <body>
-<div class="product-details">
-        <h2 class="product-title">Product Title</h2>
-        <img src="" alt="Product Image" class="product-image">
-        <p class="product-cpu">Product CPU goes here.</p>
-        <p class="product-gpu">Product GPU goes here.</p>
-        <p class="product-price">Product Price goes here.</p>
-        <p class="product-description">Product Description goes here.</p>
+  <div class="wraper">
+             <header class="header">
+                 <div class="container">
+                     <div class="header__inner">
+                         <a href="index.html" class="logo">
+                             <img class="header__logo" src="images/logo.svg" alt="" >
+                         </a>
+                <nav class="menu">
+                    <ul class="menu__list">
+                        <li class="menu__item">
+                            <a href="#" class="menu__link">Home</a>
+                        </li>
+                        <li class="menu__item menu-with-submenu">
+                            <a href="#" class="menu__link active">Product</a>
+                            <ul class="submenu">
+                                <li class="submenu__item"><a class="submenu__link" href="lite.html">Lite PC</a></li>
+                                <li class="submenu__item"><a class="submenu__link" href="medium.html">Medium PC</a></li>
+                                <li class="submenu__item"><a class="submenu__link" href="legend.html">Legend PC</a></li>
+                            </ul> 
+                        </li>
+                        <li class="menu__item">
+                            <a href="#" class="menu__link">Contact</a>
+                        </li>
+                        <li class="menu__item">
+                            <a href="#" class="menu__link">About</a>
+                        </li>
+                    </ul>
+                </nav>
+                     </div>
+                 </div>
+             </header>
+             
+<main class="main">
+    <div class="product__info">
+        <div class="container">
+            <h2 class="product-title">Product Title</h2>
+            <div class="product-details">
+                <div class="product-content">
+                    <img src="" alt="Product Image" class="product-image">
+                    <div class="product-info">
+                        <p class="product-description">Product Description goes here.</p>
+                    <div class="product__item">
+                        <img src="images/icon/chip.svg" alt="" class="info-image">
+                        <p class="product-cpu">Product CPU goes here.</p>
+                    </div>
+                    <div class="product__item">   
+                        <img src="images/icon/video.svg" alt="" class="info-image">
+                        <p class="product-gpu">Product GPU goes here.</p>
+                    </div>
+                    <div class="product__item">
+                        <img src="images/icon/ram.svg" alt="" class="info-image">
+                        <p class="product-ram">Product RAM goes here.</p>
+                    </div>
+                    <div class="product__item">
+                        <img src="images/icon/nvme.svg" alt="" class="info-image">
+                        <p class="product-nvme">Product NVME goes here.</p>
+                    </div>
+                    <div class="product__item">   
+                        <img src="images/icon/money.svg" alt="" class="info-image">
+                        <p class="product-price">Product Price goes here.</p>
+                    </div>
+                    <div class="product__item">   
+                        <img src="images/icon/dostavka.svg" alt="" class="info-image">
+                        <p class="product-delivery">Shipping depends on your region</p>
+                    </div>     
+                    </div>
+                </div>
+            </div>
+                <p class="product__time">Computer assembly time 5 days</p>
+                  <button class="truck-button">
+                        <span class="default">Complete Order</span>
+                        <span class="success">
+                            Order Placed
+                            <svg viewbox="0 0 12 10">
+                                <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
+                            </svg>
+                        </span>
+                        <div class="truck">
+                            <div class="wheel"></div>
+                            <div class="back"></div>
+                            <div class="front"></div>
+                            <div class="box"></div>
+                        </div>
+                    </button>
+        </div>
     </div>
-    <a href="index.html">Back to Products</a>
+</main>
+             
+             <footer class="footer">
+             <div class="container">
+        <div class="footer__center">
+            <a href="#">
+                <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 49 49" fill="#AFAFAF" class="footer__icon">
+                    <path d="M43.1667 0H5.83333C2.61683 0 0 2.61683 0 5.83333V43.1667C0 46.3832 2.61683 49 5.83333 49H43.1667C46.3832 49 49 46.3832 49 43.1667V5.83333C49 2.61683 46.3832 0 43.1667 0ZM38.507 21.3768C38.2422 21.4013 37.9738 21.4177 37.702 21.4177C34.6418 21.4177 31.9527 19.8438 30.3882 17.465C30.3882 23.7055 30.3882 30.8058 30.3882 30.9248C30.3882 36.4187 25.9338 40.873 20.44 40.873C14.9462 40.873 10.4918 36.4187 10.4918 30.9248C10.4918 25.431 14.9462 20.9767 20.44 20.9767C20.6477 20.9767 20.8507 20.9953 21.0548 21.0082V25.9105C20.8507 25.8860 20.65 25.8487 20.44 25.8487C17.6353 25.8487 15.3627 28.1213 15.3627 30.9260C15.3627 33.7307 17.6353 36.0033 20.44 36.0033C23.2447 36.0033 25.7215 33.7937 25.7215 30.9890C25.7215 30.8782 25.7705 8.12933 25.7705 8.12933H30.4558C30.8968 12.3188 34.2790 15.6252 38.507 15.9285V21.3768Z"/>
+                </svg>
+            </a>
+            <a href="#">
+                <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 49 49" fill="#AFAFAF" class="footer__icon">
+                    <path d="M24.5 0C10.9898 0 0 10.9898 0 24.5C0 38.0102 10.9898 49 24.5 49C38.0102 49 49 38.0102 49 24.5C49 10.9898 38.0102 0 24.5 0ZM36.4698 19.7321C36.4805 19.9835 36.4869 20.2391 36.4869 20.4958C36.4869 28.2911 30.5504 37.2826 19.6969 37.2826C16.3649 37.2826 13.262 36.3058 10.6522 34.6313C11.1134 34.6867 11.581 34.7133 12.0593 34.7133C14.8246 34.7133 17.3694 33.7717 19.387 32.1887C16.8049 32.1419 14.6276 30.4322 13.8745 28.0908C14.2356 28.1601 14.6052 28.1974 14.9865 28.1974C15.5245 28.1974 16.0464 28.126 16.5396 27.9897C13.8425 27.4453 11.809 25.0635 11.809 22.2034C11.809 22.1778 11.809 22.1533 11.809 22.1288C12.6047 22.5709 13.5133 22.8372 14.4816 22.8681C12.8966 21.8082 11.8569 20.0037 11.8569 17.9564C11.8569 16.8752 12.1467 15.8622 12.6548 14.9887C15.5660 18.5582 19.9142 20.9070 24.8174 21.1542C24.7162 20.7217 24.6630 20.2722 24.6630 19.8098C24.6630 16.5513 27.3047 13.9096 30.5643 13.9096C32.2612 13.9096 33.7940 14.6254 34.8699 15.7727C36.2131 15.5085 37.4775 15.0174 38.6173 14.3421C38.1774 15.7183 37.2411 16.8752 36.0214 17.6059C37.2166 17.4610 38.3521 17.1457 39.4120 16.6760C38.6216 17.8594 37.6213 18.9002 36.4698 19.7321Z"/>
+                </svg>
+            </a>
+            <a href="#">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 49 49" fill="#AFAFAF" class="footer__icon">
+                    <path d="M14.4773 0C6.49527 0 0 6.49527 0 14.4773V34.5227C0 42.5047 6.49527 49 14.4773 49H34.5227C42.5047 49 49 42.5047 49 34.5227V14.4773C49 6.49527 42.5047 0 34.5227 0H14.4773ZM14.4773 2.22727H34.5227C41.3009 2.22727 46.7727 7.69914 46.7727 14.4773V34.5227C46.7727 41.3009 41.3009 46.7727 34.5227 46.7727H14.4773C7.69914 46.7727 2.22727 41.3009 2.22727 34.5227V14.4773C2.22727 7.69914 7.69914 2.22727 14.4773 2.22727ZM37.8636 8.90909C37.2729 8.90909 36.7064 9.14375 36.2887 9.56144C35.871 9.97914 35.6364 10.5457 35.6364 11.1364C35.6364 11.7271 35.871 12.2936 36.2887 12.7113C36.7064 13.129 37.2729 13.3636 37.8636 13.3636C38.4543 13.3636 39.0209 13.129 39.4386 12.7113C39.8563 12.2936 40.0909 11.7271 40.0909 11.1364C40.0909 10.5457 39.8563 9.97914 39.4386 9.56144C39.0209 9.14375 38.4543 8.90909 37.8636 8.90909ZM24.5 12.25C17.7477 12.25 12.25 17.7477 12.25 24.5C12.25 31.2523 17.7477 36.75 24.5 36.75C31.2523 36.75 36.75 31.2523 36.75 24.5C36.75 17.7477 31.2523 12.25 24.5 12.25ZM24.5 14.4773C30.0486 14.4773 34.5227 18.9514 34.5227 24.5C34.5227 30.0486 30.0486 34.5227 24.5 34.5227C18.9514 34.5227 14.4773 30.0486 14.4773 24.5C14.4773 18.9514 18.9514 14.4773 24.5 14.4773Z"/>
+                    </svg>
+            </a>
+        </div>
+        <h3 class="footer__name">AssembleX</h3>
+        <div class="footer__left">
+            <p class="footer__reserved">© AssembleX Inc. 2023 All Rights Reserved</p>
+            <a href="privacy-policy.html" class="footer__policy">Privacy Policy</a>
+        </div>
+
+            
+            </div>
+             </footer>
+         </div>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.0.1/dist/gsap.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="js/slick.min.js"></script>
+  <script src="js/jquery.fancybox.min.js"></script>
   <script src="js/main.js"></script>
 </body>
 </html>
